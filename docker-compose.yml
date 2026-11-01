@@ -1,0 +1,20 @@
+# Starts a MySQL 8 database for the JobHub backend.
+#   docker compose up -d
+# (Not needed if you already have MySQL installed locally.)
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: jobhub-mysql
+    environment:
+      MYSQL_DATABASE: jobsearch
+      MYSQL_USER: jobsearch
+      MYSQL_PASSWORD: jobsearch
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - jobhub-data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  jobhub-data:
