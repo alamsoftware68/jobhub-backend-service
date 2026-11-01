@@ -1,0 +1,62 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: jobhub-backend
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/jobsearch?createDatabaseIfNotExist=true&serverTimezone=UTC&characterEncoding=UTF-8}
+    username: ${DB_USER:jobsearch}
+    password: ${DB_PASSWORD:jobsearch}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none   # schema is managed by Flyway (src/main/resources/db/migration)
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+app:
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173}
+  fetch:
+    # Every 4 hours (sec min hour day month weekday)
+    cron: ${FETCH_CRON:0 0 */4 * * *}
+    run-on-startup: true
+    max-days-old: 30          # only fetch jobs published in the last N days
+    max-results-per-search: 100
+    cleanup-after-days: 60    # delete unsaved jobs older than this
+    details-per-run: 150      # Arbeitsagentur: how many new job descriptions to load per run
+  sources:
+    arbeitsagentur:
+      enabled: true
+      base-url: https://rest.arbeitsagentur.de/jobboerse/jobsuche-service
+      api-key: jobboerse-jobsuche   # public key published by the Bundesagentur
+      search-path: /pc/v6/jobs      # v4 search no longer works (checked Oct 2026)
+      details-path: /pc/v4/jobdetails
+    arbeitnow:
+      enabled: true
+      base-url: https://www.arbeitnow.com/api/job-board-api
+      max-pages: 20              # ~100 jobs per page; filtered by your keywords
+    adzuna:
+      # Free key: https://developer.adzuna.com  -> set ADZUNA_APP_ID / ADZUNA_APP_KEY
+      app-id: ${ADZUNA_APP_ID:}
+      app-key: ${ADZUNA_APP_KEY:}
+      base-url: https://api.adzuna.com/v1/api/jobs   # + /{country}/search/{page}
+    jooble:
+      # Free key: https://jooble.org/api/about  -> set JOOBLE_API_KEY
+      api-key: ${JOOBLE_API_KEY:}
+      base-url: https://jooble.org/api
+
+logging:
+  level:
+    com.jobsearch: INFO

@@ -1,0 +1,26 @@
+{
+  "stellenangebote": [
+    {
+      "beruf": "Softwareentwickler/in",
+      "titel": "Senior Java Developer (m/w/d) Spring Boot",
+      "refnr": "10000-1199999999-S",
+      "arbeitsort": { "plz": "10115", "ort": "Berlin", "region": "Berlin", "land": "Deutschland" },
+      "arbeitgeber": "Beispiel Tech GmbH",
+      "aktuelleVeroeffentlichungsdatum": "2026-10-20",
+      "modifikationsTimestamp": "2026-10-20T08:15:30.123",
+      "eintrittsdatum": "2026-11-01"
+    },
+    {
+      "beruf": "Informatiker/in",
+      "titel": "Backend Entwickler Java - Homeoffice möglich",
+      "refnr": "10001-1188888888-S",
+      "arbeitsort": { "ort": "München", "region": "Bayern" },
+      "arbeitgeber": "Muster AG",
+      "aktuelleVeroeffentlichungsdatum": "2026-10-18"
+    },
+    { "titel": "Missing refnr is skipped" }
+  ],
+  "maxErgebnisse": "2",
+  "page": "1",
+  "size": "50"
+}

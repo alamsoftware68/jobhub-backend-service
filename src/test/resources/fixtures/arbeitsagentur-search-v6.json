@@ -1,0 +1,41 @@
+{
+  "ergebnisliste": [
+    {
+      "stellenangebotsart": "ARBEIT",
+      "stellenangebotsTitel": "Java Developer (w/m/d)",
+      "arbeitszeitVollzeit": false,
+      "stellenlokationen": [
+        { "adresse": { "plz": "10178", "ort": "Berlin", "region": "BERLIN", "land": "DEUTSCHLAND" }, "breite": 52.52, "laenge": 13.40 }
+      ],
+      "homeofficemoeglich": true,
+      "homeofficetyp": "NACH_VEREINBARUNG",
+      "datumErsteVeroeffentlichung": "2026-09-03",
+      "aenderungsdatum": "2026-10-01T07:09:26.112",
+      "externeURL": "https://www.get-in-it.de/jobsuche/p208756",
+      "hauptberuf": "Anwendungsprogrammierer/in",
+      "firma": "pulsation-it",
+      "referenznummer": "13644-208756-S",
+      "alleBerufe": ["Anwendungsprogrammierer/in"]
+    },
+    {
+      "stellenangebotsTitel": "Java Developer (m/w/d) - Konstanz, Berlin oder remote",
+      "arbeitszeitVollzeit": true,
+      "stellenlokationen": [
+        { "adresse": { "plz": "10115", "ort": "Berlin", "region": "BERLIN", "land": "DEUTSCHLAND" } },
+        { "adresse": { "plz": "78467", "ort": "Konstanz", "region": "BADEN_WUERTTEMBERG", "land": "DEUTSCHLAND" } }
+      ],
+      "homeofficemoeglich": true,
+      "homeofficeprozent": 100,
+      "datumErsteVeroeffentlichung": "2026-10-27",
+      "hauptberuf": "Softwareentwickler/in",
+      "firma": "Example Software GmbH",
+      "referenznummer": "10000-1234567890-S",
+      "gehaltsspanneVon": 60000,
+      "gehaltsspanneBis": 75000,
+      "artDerVerguetung": "JAHR"
+    }
+  ],
+  "maxErgebnisse": 199,
+  "page": 1,
+  "size": 50
+}

@@ -1,0 +1,19 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "id": "4711",
+      "title": "<strong>Java</strong> Backend Developer",
+      "description": "Build Spring Boot microservices, REST APIs and run them on AWS with Kubernetes.",
+      "redirect_url": "https://www.adzuna.de/details/4711",
+      "created": "2026-10-21T09:30:00Z",
+      "company": { "display_name": "Adzuna Kunde GmbH" },
+      "location": { "display_name": "Berlin, Deutschland", "area": ["Deutschland", "Berlin"] },
+      "salary_min": 65000,
+      "salary_max": 80000,
+      "salary_is_predicted": "0",
+      "contract_time": "full_time",
+      "contract_type": "permanent"
+    }
+  ]
+}
